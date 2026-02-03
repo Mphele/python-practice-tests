@@ -30,29 +30,32 @@ class AssessmentTwo:
 
     def first_and_last(self, items):
         """Return a tuple of (first, last) item or None if list is empty."""
-        
-        
+        if items is None:
+            return []
+        else:
+            return (items[0],items[-1])
   
                 
     def count_consonants(self, text):
         """Return the number of consonants in the string (letters only)."""
  
-    
+        return sum(1 for i in text if i.lower() in 'bcdfghjklmnpqrstvwxyz' )
     
 
     def is_even_length(self, text):
         """Return True if the string length is even."""
-  
+        return True if len(text)%2 == 0 else False
 
     # ===== INTERMEDIATE =====
 
     def remove_duplicates_preserve_order(self, numbers):
         """Remove duplicates while preserving order."""
 
-
+        return set(numbers)
     def word_lengths(self, sentence):
         """Return a dictionary mapping each word to its length."""
    
+         
 
     def second_largest(self, numbers):
         """Return the second largest number or None if it doesn't exist."""
